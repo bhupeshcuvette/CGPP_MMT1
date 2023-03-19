@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dangrek' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="container">
+        <div class="trophy" id="trophy"><image src="images/trophy.png"></image></div>
+        <div class="stars" id="stars"><image src="images/stars.png"></image></div>
+        <span class="hurray" id="hurray"> HURRAY !! </span>
+        <span class="winning-message" id="winning-message">YOU WON THE GAME </span>
+        <button class="play-again-replay" id="play-again-replay" onclick="returnbacktoPlay()">PLAY AGAIN </button>
+        <div class="rule-description" id="rule-description">
+            <div class="all-rules" id="all-rules">
+                <span class="game-rules" id="game-rules">Game Rules</span>
+                <ul>
+                    <li ><span>Rock beats scissors, scissors beat paper, and paper beats rock.</span> </li>
+                    <li ><span>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span></li>
+                    <li ><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</span></li>
+                    <li ><span>If both players lay down the same hand, each player lays down another hand</span></li>
+                </ul>
+                <button class="rules-close" id="rules-close" onclick="ruleboxcloseCelebration()"> X </button>
+            </div>
+        <div class="rules-display-button" id="rules-display-button" onclick="ruleboxopenCelebration()">RULES</div>
+        </div>
+
+    </div>
+    <script>
+        let allRulesCelebration = document.getElementById("all-rules");
+        const returnbacktoPlay=()=>{
+            window.open("index.html",'_self');
+        }
+        const ruleboxopenCelebration =()=>{
+            allRulesCelebration.style.display='block';
+        }
+        const ruleboxcloseCelebration =()=>{
+            allRulesCelebration.style.display='none';
+        }
+    </script>
+    
+</body>
+</html>

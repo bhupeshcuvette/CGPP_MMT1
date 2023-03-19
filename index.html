@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper & Scissors </title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dangrek' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="container">
+        <div class="score-board" id="score-board">
+            <div class="game-title" id="game-title">
+                <p class="rock-title" id="rock-title">ROCK</p>
+                <p class="paper-title" id="paper-title">PAPER</p>
+                <p class="scissors-title" id="scissors-title">SCISSORS</p>
+            </div>
+            <div class="score-board-display" id="score-board-display">
+                <div class="computer-score-display" id="computer-score-display">
+                    <p class="cs-score-display-name">COMPUTER <br><span class="cs-score-name"> SCORE </span></p>
+                    <span class="computer-score" id="computer-score"> 0 </span>
+                </div>
+                <div class="user-score-display" id="user-score-display">
+                    <p class="user-score-display-name">YOUR <br><span class="user-score-name"> SCORE </span></p>
+                    <span class="user-score" id="user-score"> 0 </span>
+                </div>
+            </div> 
+        </div>
+
+        <div class="gameplay-type" id="gameplay-type">
+            <button class="rocktype" id="rocktype" onclick="userSelection('rocktype')"><image src="images/rock-image.png"></image></button>
+            <button class="papertype" id="papertype" onclick="userSelection('papertype')"><image src="images/paper-image.png"></image></button>
+            <button class="scissortype" id="scissortype" onclick="userSelection('scissortype')"><image src="images/scissor-image.png"></image></button>
+            <div class="line-1" id="line-1"></div>
+            <div class="line-2" id="line-2"></div>
+            <div class="line-3" id="line-3"></div>
+        </div>
+        
+
+        <div class="rule-description" id="rule-description">
+            <div class="all-rules" id="all-rules">
+                <span class="game-rules" id="game-rules">Game Rules</span>
+                <ul>
+                    <li ><span>Rock beats scissors, scissors beat paper, and paper beats rock.</span> </li>
+                    <li ><span>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span></li>
+                    <li ><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</span></li>
+                    <li ><span>If both players lay down the same hand, each player lays down another hand</span></li>
+                </ul>
+                <button class="rules-close" id="rules-close" onclick="ruleboxClose()"> X </button>
+            </div>
+        <div class="rules-display-button" id="rules-display-button" onclick="ruleboxOpen()">RULES</div>
+        </div>
+        <div class="next-display-button" id="next-display-button" onclick="gotoCelebration()">NEXT</div>
+
+        <div class="game-result-display" id="game-result-display">
+            <div class="user-choice-result" id="user-choice-result">
+                <span class="user-choice-text" id="user-choice-text">YOU PICKED</span>
+                <button class="user-choice-type" id="user-choice-type"><image src="images/rock-image.png"></image></button>
+            </div>
+            <div class="game-result" id="game-result">
+                <span class="game-result-text" id="game-result-text">YOU WIN</span>
+                <span class="against-pc" id="against-pc">AGAINST PC</span>
+                <button class="play-again-replay" id="play-again-replay" onclick="letsPlayAgainReplay()">PLAY AGAIN </button>
+            </div>
+            <div class="computer-choice-result" id="computer-choice-result">
+                <span class="computer-choice-text" id="computer-choice-text">PC PICKED</span>
+                <button class="computer-choice-type" id="computer-choice-type"><image src="images/paper-image.png"></image></button>
+            </div>
+            <div class="winner-first-circle-left" id="winner-first-circle-left"></div>
+            <div class="winner-second-circle-left" id="winner-second-circle-left"></div>
+            <div class="winner-third-circle-left" id="winner-third-circle-left"></div>
+            <div class="winner-first-circle-right" id="winner-first-circle-right"></div>
+            <div class="winner-second-circle-right" id="winner-second-circle-right"></div>
+            <div class="winner-third-circle-right" id="winner-third-circle-right"></div>
+            
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
